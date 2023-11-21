@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import "../css/cadastrarTarefa.css";
 
 const FormCadastro = () => {
     const [tarefa, setTarefa] = useState(""); 
@@ -19,14 +20,25 @@ const FormCadastro = () => {
     }
   
     return( 
-      <div>
-        <h1>Form cadastro</h1>
-        <form>
+      <div className="cadastro-div">
+        <h1 className="title">Tarefa: </h1>
+        <form >
            <label>
-            <input type="text" value={tarefa} placeholder="tarefa" onChange={(e) => setTarefa(e.target.value)}/>
+            <input 
+            className="input-form"
+            type="text" 
+            value={tarefa} placeholder="cadastrar tarefa" 
+            onChange={(e) => setTarefa(e.target.value)}
+            />
            </label>
         </form>
-        <button type="button" onClick={cadastro}>Cadastrar</button>
+        <button 
+        className="button"
+        type="button" 
+        onClick={cadastro}
+        >
+          Cadastrar
+        </button>
       </div> 
     )
 }

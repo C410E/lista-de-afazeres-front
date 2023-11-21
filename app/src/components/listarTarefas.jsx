@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import "../css/listarTarefas.css";
 
 const ListarTarefas = () => {
     const [tarefa, setTarefas] = useState([]);
@@ -18,11 +19,15 @@ const ListarTarefas = () => {
         buscarTarefa()
     }, [])
     return (
-        <div>
-            <h1>tarefas registradas</h1>
-            <ul>
+        <div className="Div">
+            <ul className="Ul">
                 {tarefa.map((tarefa) => (
-                    <li key={tarefa.id}>{tarefa.tarefa}, {tarefa.data_tarefa}</li>
+                    <li 
+                    className="post-it "
+                    key={tarefa.id}
+                    >
+                    {tarefa.tarefa} - {tarefa.data_tarefa}
+                    </li>
                    
                 ))}
             </ul>

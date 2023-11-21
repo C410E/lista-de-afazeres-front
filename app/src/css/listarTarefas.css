@@ -1,0 +1,30 @@
+
+.Div {
+    margin: 20px;
+   
+}
+
+.post-it {
+    background-color: #ffeb3b; 
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.Ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li {
+    background-color: #fff;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}

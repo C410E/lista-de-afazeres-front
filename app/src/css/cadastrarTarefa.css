@@ -1,0 +1,41 @@
+.cadastro-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.title {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.input-form {
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 12px; 
+    margin-top: 4px;
+}
+
+.input-form:focus {
+    outline: none;
+    border-color: #007bff; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+}
+
+.button {
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    background: #01d28e;
+    border: 1px solid #01d28e;
+    color: #000000;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.button:hover {
+    background: #6cf0c2;
+  }
