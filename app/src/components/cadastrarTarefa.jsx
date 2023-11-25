@@ -3,22 +3,23 @@ import { useState } from "react";
 import "../css/cadastrarTarefa.css";
 
 const FormCadastro = () => {
-    const [tarefa, setTarefa] = useState(""); 
+  const [tarefa, setTarefa] = useState(""); 
 
-    const cadastro = async () => {
-        try {
-            const response = await axios.post("http://localhost:3001/cadastrar-tarefa", {
-              tarefa
-            });
+  const cadastro = async () => {
+      try {
+          const response = await axios.post("http://localhost:3001/cadastrar-tarefa", {
+            tarefa
+          });
     
-            console.log("Caddastro realizado com sucesso", response.data)
+          console.log("Caddastro realizado com sucesso", response.data)
     
-            
-           } catch (error) {
-                console.error('Erro ao cadastrar:', error);
-           }
-    }
-  
+          if (response.status === 200) {
+               window.location.reload();
+            }
+          } catch (error) {
+            console.error('Erro ao cadastrar:', error.message);
+          }
+  }
     return( 
       <div className="cadastro-div">
         <h1 className="title">Tarefa: </h1>

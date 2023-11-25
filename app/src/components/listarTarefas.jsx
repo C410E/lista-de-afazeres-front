@@ -15,11 +15,20 @@ const ListarTarefas = () => {
         }
     }
 
+    const excluirTarefa = async (id) => {
+        const idSeguro = encodeURIComponent(id);
+
+        await axios.delete(`http://localhost:3001/excluir-tarefa/${idSeguro}`);
+        
+        buscarTarefa();
+    }
+
     useEffect(() => {
         buscarTarefa()
     }, [])
     return (
         <div className="Div">
+            
             <ul className="Ul">
                 {tarefa.map((tarefa) => (
                     <li 
@@ -27,8 +36,13 @@ const ListarTarefas = () => {
                     key={tarefa.id}
                     >
                     {tarefa.tarefa} - {tarefa.data_tarefa}
+                    <button 
+                        onClick={() => excluirTarefa(tarefa.id)}
+                        className="button-excluir"
+                        >
+                            Excluir
+                        </button>
                     </li>
-                   
                 ))}
             </ul>
         </div>

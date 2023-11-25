@@ -28,3 +28,19 @@ li {
     border-radius: 5px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+
+.button-excluir {
+    cursor: pointer;
+    font-size: 15px;
+    background: #ff3b3b;
+    margin-top: 10px;
+    margin-left: 10px;
+    border: 1px solid #ff3b3b;
+    color: #000000;
+    border-radius: 12px;
+}
+
+.button-excluir:hover {
+    background: #ff6868b8;
+}
